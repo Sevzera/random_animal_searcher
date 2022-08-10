@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Random Animal Searcher</title>
+	<link href="./css/tailwind.css" rel="stylesheet">
+	<script src="./js/script.js" defer></script>
+	<style>
+		#picture {
+			max-height: 500px;
+			width: auto;
+		}
+
+		.previous-picture {
+			max-height: 180px;
+			width: auto;
+		}
+
+		.previous-picture:hover {
+			opacity: 0.75;
+		}
+	</style>
+</head>
+
+<body class="bg-slate-500 font-mono">
+	<div class="flex">
+		<p class="absolute right-0 hidden" id="loading">Loading...</p>
+
+		<div class="text-left px-40 m-auto mt-32 flex-col basis-1/3">
+			<div>
+				<h1 class="font-black text-2xl">Animal Info</h1>
+				<div class="w-80">
+					<p id="val0"></p>
+					<p id="val1"></p>
+					<p id="val2"></p>
+					<p id="val3"></p>
+					<p id="calc0"></p>
+					<p id="calc1"></p>
+				</div>
+			</div>
+		</div>
+
+		<div class="text-center flex-col basis-1/3">
+			<h2 class="font-black text-4xl">Random Animal Searcher</h2>
+			<p class="text-lg">Search for a random animal from all around the World!</p>
+
+			<img class="mx-auto rounded-xl border-4 border-black" src="" id="picture" />
+
+			<strong>
+				<p class="text-2xl" id="name"></p>
+			</strong>
+			<p class="text-xl" id="subtext"></p>
+			<p class="text-md" id="description"></p>
+
+			<button class="m-8 p-2 rounded-md disabled:opacity-50 bg-zinc-600" id="button">Find
+				Animal!</button>
+			<p class="text-xs">Filter animals by type</p>
+			<select id="filter">
+				<option value="all">All</option>
+				<option value="mammal">Mammal</option>
+				<option value="reptile">Reptile</option>
+				<option value="bird">Bird</option>
+				<option value="amphibian">Amphibian</option>
+				<option value="fish">Fish</option>
+			</select>
+		</div>
+
+		<div class="text-center flex-col basis-1/3">
+			<h3 class="font-black text-2xl">Latest Animals Found</h3>
+			<ul id="previous-list">
+				<li>
+					<img index="0" class="previous-picture mx-auto rounded-xl border-4 border-black" src="" />
+					<p class="previous-name text-center"></p>
+				</li>
+				<li>
+					<img index="1" class="previous-picture mx-auto rounded-xl border-4 border-black" src="" />
+					<p class="previous-name text-center"></p>
+				</li>
+				<li>
+					<img index="2" class="previous-picture mx-auto rounded-xl border-4 border-black" src="" />
+					<p class="previous-name text-center"></p>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+
+</html>
