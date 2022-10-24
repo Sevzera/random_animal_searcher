@@ -8,4 +8,4 @@ Projeto simples que implementa uma interface front-end que busca e exibe informa
 
 EXECUÇÃO:
 
-- Basta abrir o arquivo *index.html*
+- Basta abrir o arquivo *./src/index.html*
